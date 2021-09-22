@@ -1,0 +1,104 @@
+<!--#include virtual="/parts/header.html" -->
+<main>
+    <div class="container fixed-cont">
+        <div class="row">
+            <div class="col-lg-4 col-12">
+                <div class="payment-search-block">
+                    <div class="search payment-search">
+                        <form action="" class="search-form">
+                            <input class="search-form-input" type="search" placeholder="Шукати">
+                            <button class="search-form-mic">
+                                <img src="images/icons/mic.svg" alt="mic">
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="aside-block">
+                    <!--#include virtual="/parts/aside.html" -->
+                </div>
+            </div>
+            <div class="col-lg-8 col-12">
+                <div class="row">
+                    <div class="col-sm-6 col-12">
+                        <div class="call-us">
+                            <h4 class="title-h4">Зв'яжіться з нами</h4>
+                            <form>
+                                <div class="input-line">
+                                    <label class="input-line-label" for="first_name">Ім'я</label>
+                                    <input class="input-line-input" aria-invalid="false" aria-describedby="error"
+                                        type="text" id="first_name" name="first_name">
+                                    <span class="input-line-error input-line-error-hide" id="error">Помилка!</span>
+                                </div>
+
+
+                                <div class="input-line">
+                                    <label class="input-line-label" for="phone">Телефон</label>
+                                    <input class="input-line-input" aria-invalid="false" aria-describedby="error"
+                                        type="tel" id="phone" name="phone">
+                                    <span class="input-line-error input-line-error-hide" id="error">Помилка!</span>
+                                </div>
+                                <div class="input-line">
+                                    <label class="input-line-label" for="email">Електронна пошта</label>
+                                    <input class="input-line-input" aria-invalid="false" aria-describedby="error"
+                                        type="email" id="email" name="email">
+                                    <span class="input-line-error input-line-error-hide" id="error">Помилка!</span>
+                                </div>
+                                <div class="input-line">
+                                    <label class="input-line-label" for="notes">Повідомлення</label>
+                                    <textarea name="notes" id="notes" cols="50" rows="2"></textarea>
+                                </div>
+                                <button class="btn send-btn">
+                                    НАДІСЛАТИ
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-12">
+
+                        <div class="contacts-block">
+                            <h4 class="title-h4">Контакти</h4>
+                            <div class="contacts-block-item">
+                                <img src="images/icons/contacts/place.svg" alt="place" class="contacts-icons">
+                                <p>
+                                    м. Івано-Франківськ, <br> вул. Січових стрільців,<br> буд. 37, офіс 1
+                                </p>
+                            </div>
+                            <div class="contacts-block-item">
+                                <img src="images/icons/contacts/Vector.svg" alt="phone" class="contacts-icons">
+                                <p>
+                                    +38 050 4426829 <br>
+                                    відділ продажів
+                                </p>
+                            </div>
+                            <div class="contacts-block-item">
+                                <img src="images/icons/contacts/Vector.svg" alt="phone" class="contacts-icons">
+                                <p>
+                                    +38 050 4426830 <br> керівник компанії
+                                </p>
+                            </div>
+                            <div class="contacts-block-item">
+                                <img src="images/icons/contacts/mail_outline.svg" alt="" class="contacts-icons">
+                                <p>
+                                    automatics@gmail.com
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="map-block">
+                    <div id="map"></div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+</main>
+<script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBB49JcBPcJCBzSB36dSTFct0QmJ4mtNDU&callback=initMap&v=weekly"
+    async></script>
+<!--#include virtual="/parts/footer.html" -->

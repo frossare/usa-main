@@ -1,0 +1,73 @@
+// USER VARIABLES SECTION
+
+$accent: #5A0AFC // Accent Color
+
+$headerColor: #14191DB2
+$footerColor: #14191DB2
+$cardColor: #14191DB2
+//$purple: #5A0AFC
+
+$backgroundColor: #1F252A
+
+
+$fontsize: 16px // Body Font Size
+$textcolor: #FFFFFF // Text Color
+$lineheight: 28px // Document Line Height
+$userfont: Montserra, sans-serif // User Font Family
+$systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font Family
+
+// Bootstrap compatible gutter variable => $gutter
+$grid-gutter-width: 30px
+$gutter: $grid-gutter-width
+
+// IMPORT SECTION
+
+@import 'node_modules/bootstrap/scss/bootstrap-reboot.scss' // Bootstrap Reboot collection
+@import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss' // Bootstrap Breakpoints mixin
+@import 'node_modules/bootstrap/scss/bootstrap-grid.scss' // Optional Bootstrap Grid
+// @import 'node_modules/bootstrap/scss/_utilities.scss' // Optional Bootstrap Utilites
+//@import 'node_modules/swiper/swiper-bundle'
+
+@import 'node_modules/swiper/swiper.scss'
+@import 'node_modules/swiper/modules/pagination/pagination.scss'
+
+@import  'node_modules/mmenu-light/dist/mmenu-light'
+// FONTS LOAD SECTION
+
+@mixin font($fname, $fstyle, $fweight, $furl)
+	@font-face
+		font-family: $fname
+		font-style: $fstyle
+		font-weight: $fweight
+		src: url($furl) format('woff2')
+
+@include font('Montserra', normal, 400, '../fonts/Montserrat-Regular.woff2')
+@include font('Montserra', bold, 600, '../fonts/Montserrat-SemiBold.woff2')
+@include font('Montserra', normal, 500, '../fonts/Montserrat-Regular.woff2')
+
+// GENERAL DOCUMENT STYLES
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+input, textarea
+	outline: none
+	&:focus:required:invalid
+		border-color: red
+	&:required:valid
+		border-color: green
+
+body
+	font-family: $userfont
+	font-size: $fontsize
+	line-height: $lineheight
+	color: $textcolor
+	min-width: 320px
+	position: relative
+	overflow-x: hidden
+
+	

@@ -1,0 +1,145 @@
+<!--#include virtual="/parts/header.html" -->
+<main>
+    <div class="container fixed-cont">
+        <div class="row">
+            <div class="col-lg-4 col-12">
+                <div class="payment-search-block">
+                    <div class="search payment-search">
+                        <form action="" class="search-form">
+                            <input class="search-form-input" type="search" placeholder="Шукати">
+                            <button class="search-form-mic">
+                                <img src="images/icons/mic.svg" alt="mic">
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="aside-block">
+                    <!--#include virtual="/parts/aside.html" -->
+                </div>
+            </div>
+            <div class="col-lg-8 col-12">
+                <div class="row">
+                    <div class="col-sm-6 col-12">
+                        <div class="pay-info">
+                            <h4 class="title-h4">Платіжна інформація</h4>
+                            <form>
+                                <div class="names">
+                                    <div class="input-line">
+                                        <label class="input-line-label" for="first_name">Ім'я *</label>
+                                        <input class="input-line-input" aria-invalid="false" aria-describedby="error"
+                                            type="text" id="first_name" name="first_name">
+                                        <span class="input-line-error input-line-error-hide" id="error">Помилка!</span>
+                                    </div>
+
+                                    <div class="input-line">
+                                        <label class="input-line-label" for="last_name">Прізвище *</label>
+                                        <input class="input-line-input" aria-invalid="false" aria-describedby="error"
+                                            type="text" id="last_name" name="last_name">
+                                        <span class="input-line-error input-line-error-hide" id="error">Помилка!</span>
+                                    </div>
+                                </div>
+                                <div class="input-line">
+                                    <label class="input-line-label" for="company_name">Назва компанії (не
+                                        обов'язково)</label>
+                                    <input class="input-line-input" aria-invalid="false" aria-describedby="error"
+                                        type="text" id="company_name" name="company_name">
+                                    <span class="input-line-error input-line-error-hide" id="error">Помилка!</span>
+                                </div>
+                                <div class="input-line">
+                                    <label class="input-line-label" for="address">Вулиця та номер будинку / квартири
+                                        *</label>
+                                    <input class="input-line-input" aria-invalid="false" aria-describedby="error"
+                                        type="text" id="address" name="address">
+                                    <span class="input-line-error input-line-error-hide" id="error">Помилка!</span>
+                                </div>
+                                <div class="input-line">
+                                    <label class="input-line-label" for="city">Місто (село) *</label>
+                                    <input class="input-line-input" aria-invalid="false" aria-describedby="error"
+                                        type="text" id="city" name="city">
+                                    <span class="input-line-error input-line-error-hide" id="error">Помилка!</span>
+                                </div>
+                                <div class="input-line">
+                                    <label class="input-line-label" for="city"> Область *</label>
+                                    <select>
+                                        <option value="">1</option>
+                                    </select>
+                                    <span class="input-line-error input-line-error-hide" id="error">Помилка!</span>
+                                </div>
+                                <div class="input-line">
+                                    <label class="input-line-label" for="phone">Телефон *</label>
+                                    <input class="input-line-input" aria-invalid="false" aria-describedby="error"
+                                        type="tel" id="phone" name="phone">
+                                    <span class="input-line-error input-line-error-hide" id="error">Помилка!</span>
+                                </div>
+                                <div class="input-line">
+                                    <label class="input-line-label" for="email">Електронна пошта (необов’язково)</label>
+                                    <input class="input-line-input" aria-invalid="false" aria-describedby="error"
+                                        type="email" id="email" name="email">
+                                    <span class="input-line-error input-line-error-hide" id="error">Помилка!</span>
+                                </div>
+                                <div class="input-line">
+                                    <label class="input-line-label" for="notes">Примітки до замовлення
+                                        (необов’язково))</label>
+                                    <textarea name="notes" id="notes" cols="50" rows="2"></textarea>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+                    <div class="col-sm-6 col-12">
+
+                        <div class="your-order">
+                            <h4 class="title-h4">Ваше замовлення</h4>
+                            <div>
+                                <div class="radio">
+                                    <input class="custom-radio" type="radio" id="delivery-1" name="delivery" value="1">
+                                    <label for="delivery-1"><span class="custom-radio-text">Самовивіз</span></label>
+                                </div>
+
+                                <div class="radio">
+                                    <input class="custom-radio" type="radio" id="delivery-2" name="delivery" value="2">
+                                    <label for="delivery-2"><span class="custom-radio-text">Нова пошта</span></label>
+                                </div>
+                                <div class="radio">
+                                    <input class="custom-radio" type="radio" id="delivery-3" name="delivery" value="3">
+                                    <label for="delivery-3"><span class="custom-radio-text">Укрпошта</span></label>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="radio">
+                                    <input class="custom-radio" type="radio" id="payment-1" name="payment" value="1">
+                                    <label for="payment-1"><span class="custom-radio-text">Прямий банківський
+                                            переказ</span></label>
+                                </div>
+                                <div class="radio">
+                                    <input class="custom-radio" type="radio" id="payment-2" name="payment" value="2">
+                                    <label for="payment-2"><span class="custom-radio-text">Оплата при
+                                            отриманні</span></label>
+                                </div>
+                            </div>
+
+                            <div>
+                                
+                            </div>
+
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-12">
+
+                        <!--#include virtual="/parts/similar_products_swiper.html" -->
+
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+</main>
+<!--#include virtual="/parts/footer.html" -->
