@@ -12,10 +12,11 @@ html
   height: 100%
 
 body
-  height: 100%
   display: flex
   flex-direction: column
-
+main
+    margin-top: 140px
+    min-height: calc( 100vh - 440px )
 .content
   flex: 1 0 auto
 
@@ -25,12 +26,19 @@ body
 header
     background-color: $headerColor
     height: 140px
+    position: fixed
+    width: 100%
+    z-index: 2
+    transition: all 0.33s
+    .container
+        height: 100%
     .app-header
         display: flex
         justify-content: space-between
         align-items: center
-        height: 140px
-
+        height: 100%
+    #header-logo
+        transition: all 0.33s
 .navbar
     .navbar-nav
         display: flex
@@ -46,6 +54,19 @@ header
                 //line-height: $lineheight
                 font-weight: 500
                 font-size: $fontsize
+                position: relative
+                &::after
+                    content: ""
+                    position: absolute
+                    height: 4px
+                    width: 0
+                    background-color: $accent
+                    bottom: -5px
+                    left: 50%
+                    transition: all 0.33s
+                &:hover:after
+                    width: 110%
+                    left: -5%
 .burger-menu
     display: none
 .img-shadow
@@ -71,6 +92,14 @@ header
 .sections
     position: relative
     padding: 130px 0
+#events
+    padding-bottom: 0
+    .swiper
+        padding-bottom: 0
+    .swiper-pagination
+        text-align: right
+        background-color: #14191dd3
+        bottom: 0
 .about-us-img
     //padding: 0 30px 30px 0
     border-radius: 10px
@@ -94,7 +123,10 @@ header
         -webkit-text-stroke: 2px #ffffff
         color: $backgroundColor
         font-size: 142px
-
+    .text-border-grey
+        -webkit-text-stroke: 2px $backgroundColor
+        color: #ffffff
+        font-size: 142px
 .title-h2
     font-weight: 500
     font-size: 60px
@@ -131,6 +163,9 @@ header
     background-color: $cardColor
     padding: 80px 55px
     height: 100%
+    display: flex
+    flex-direction: column
+    justify-content: space-between
 .devices-card-title
     display: flex
     align-content: center
@@ -161,6 +196,7 @@ header
     align-items: center
     justify-content: center
     &:hover
+        background-color: #5b0afc1f
         color: #ffffff
 .send-btn
     background-color: $accent
@@ -202,8 +238,33 @@ header
     border: 1px solid white
 .swiper-pagination-bullet-active
     background: var(--swiper-pagination-bullet-inactive-color, #ffffff)
-
-
+.even-slider-desc
+    position: absolute
+    width: 100%
+    height: 100%
+    top: 0
+    left: 0
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    align-items: center
+    background: linear-gradient(180deg, rgb(8, 10, 11) 25%, rgb(56, 62, 67))
+    color: #ffffff
+    opacity: 0
+    transition: all 0.33s
+    padding: 40px 0
+    &:hover
+        opacity: 0.8
+    .description
+        width: 60%
+        p
+            font-size: 16px
+            letter-spacing: .01em
+            line-height: 30px
+    .btn
+        border: 2px solid #ffffff
+        &:hover
+            background: #ffffff33
 footer
     background-color: $footerColor
     height: 300px
@@ -620,7 +681,21 @@ footer
     width: 100%
     min-height: 275px
     margin-top: 22px
-
+// 404
+.not-found
+    width: 100%
+    height: calc( 100vh - 440px  )
+    display: flex
+    justify-content: center
+    align-items: center
+    h1
+        //font-family: Montserrat
+        font-size: 360px
+        line-height: 140px
+        letter-spacing: -0.015em
+        font-weight: 200
+    img
+        margin-bottom: 30px
 @media screen and (max-width: 1199px)
     .fixed-cont
         max-width: 1140px
@@ -638,7 +713,9 @@ footer
             -webkit-text-stroke: 1px #ffffff
             color: $backgroundColor
             font-size: 79px
-    
+        .text-border-grey
+            font-size: 79px
+            -webkit-text-stroke: 1px $backgroundColor
     .sections
         padding: 90px 0
     footer
@@ -668,6 +745,12 @@ footer
         padding-left: 20px   
     .product-characteristic
         padding-left: 20px 
+    .even-slider-desc
+        padding: 20px 0
+        .description
+            width: 100%
+            p
+                margin: 0 0 8px 0
 @media screen and (max-width: 992px)
     .fixed-cont
         max-width: 960px
@@ -678,6 +761,9 @@ footer
         line-height: 60px
         .text-border
             -webkit-text-stroke: 1px #ffffff
+            font-size: 59px
+        .text-border-grey
+            -webkit-text-stroke: 1px $backgroundColor
             font-size: 59px
     .title-h2
         font-weight: 500
@@ -772,6 +858,22 @@ footer
         margin-top: 124px
     #map    
         height: 555px
+    .not-found
+        h1
+            font-size: 200px
+        img
+           width: 160px 
+    .even-slider-desc
+        .title-h2
+            font-size: 30px
+            margin-bottom: 15px
+        .description
+            p
+                font-size: 12px
+                margin: 0 0 0 0
+        .btn
+            height: 45px
+            min-width: 180px
 @media screen and (max-width: 768px)
     .fixed-cont
         max-width: 720px
@@ -796,7 +898,19 @@ footer
         height: 555px
     #map    
         left: 0
-        height: 555px            
+        height: 555px  
+    .even-slider-desc
+        opacity: 0.8
+        padding: 10px 0
+        .title-h2
+            font-size: 24px
+            margin-bottom: 5px
+        .description
+            p
+                font-size: 12px
+                line-height: 20px
+        .btn
+            height: 35px
 @media screen and (max-width: 575px)
     .fixed-cont
         max-width: 540px
@@ -809,7 +923,11 @@ footer
         .text-border
             -webkit-text-stroke: 1px #ffffff
             color: $backgroundColor
-            font-size: 47px   
+            font-size: 47px  
+        .text-border-grey
+            -webkit-text-stroke: 1px $backgroundColor
+            font-size: 47px  
+
     .about-us-img-cont
         padding: 4px
         .about-us-img
@@ -912,6 +1030,12 @@ footer
         width: 200%
         .swiper-pagination
             display: none
+    .not-found
+        h1
+            font-size: 96px
+        img
+           width: 90px 
+           margin-bottom: 20px
 @media screen and (max-width: 450px)
     .similar-goods
         width: 230%

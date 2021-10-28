@@ -13,6 +13,22 @@ import './mmenu/mmenu-light.polyfills.js'; //IE
 //import 'select-pure';
 
 
+window.addEventListener("scroll", function(e)  {
+  if (
+    document.body.scrollTop > 50 ||
+    document.documentElement.scrollTop > 50
+  ) {
+    document.getElementById("header").style.height = "70px";
+    document.getElementById("header").style.background = "#14191D";
+    document.getElementById("header-logo").style.width = "133px";
+  } else {
+    document.getElementById("header").style.height = "140px";
+    document.getElementById("header").style.background = "#14191DB2";
+    document.getElementById("header-logo").style.width = "201px";
+  }
+});
+
+
 document.addEventListener('DOMContentLoaded', () => {
 
   // slider
@@ -74,14 +90,14 @@ document.addEventListener('DOMContentLoaded', () => {
   let map;
 
   function initMap() {
-    map = new google.maps.Map(document.getElementById("map"), {
-      center: { lat: -34.397, lng: 150.644 },
-      zoom: 8,
-    });
+    let mapSetings = {center: { lat: Number, lng: Number }, zoom: 8, };
+
+    mapSetings.center.lat= Number(document.getElementById("map").attributes.lat.value);
+    mapSetings.center.lng= Number(document.getElementById("map").attributes.lng.value);
+
+    map = new google.maps.Map(document.getElementById("map"), mapSetings);
   }
   window.initMap = initMap;
- // initMap();
-  console.log('1234');
 
 })
 
